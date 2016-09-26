@@ -48,7 +48,6 @@ public class Algorithm {
 
     public boolean readNodeAndRelCypherIntoArrays(String relCypher, String nodeCypher, boolean weighted) {
         Result nodeResult = db.execute(nodeCypher);
-
         long before = System.currentTimeMillis();
         ResourceIterator<Long> resultIterator = nodeResult.columnAs("id");
         int index = 0;
